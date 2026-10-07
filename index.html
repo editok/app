@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/Icon.png" />
+    <link rel="apple-touch-icon" href="/Icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#1f5f8f" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>EDITOK Post-Production Service</title>
+    <meta name="description" content="EDITOK - Photo Album Designing, Photo Editing and Video Editing Services." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://app.editok.in/" />
+    <meta property="og:title" content="EDITOK Post-Production Service" />
+    <meta property="og:description" content="EDITOK - Photo Album Designing, Photo Editing and Video Editing Services." />
+    <meta property="og:image" content="https://app.editok.in/Icon.png" />
+    <meta property="og:image:alt" content="EDITOK Logo" />
+    <meta property="og:site_name" content="EDITOK" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://app.editok.in/" />
+    <meta name="twitter:title" content="EDITOK Post-Production Service" />
+    <meta name="twitter:description" content="EDITOK - Photo Album Designing, Photo Editing and Video Editing Services." />
+    <meta name="twitter:image" content="https://app.editok.in/Icon.png" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="initial-loader" style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:#f5f7fb;">
+        <div style="width:48px;height:48px;border:3px solid #3b82f6;border-top-color:transparent;border-radius:50%;animation:spin 0.8s linear infinite;"></div>
+      </div>
+      <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+      <noscript>JavaScript is required to run this app. Please enable JavaScript in your browser.</noscript>
+    </div>
+    <script>
+      window.addEventListener('error', function(e) {
+        var loader = document.getElementById('initial-loader');
+        if (loader) {
+          loader.innerHTML = '<div style="text-align:center;font-family:sans-serif;color:#0f172a;padding:2rem;">' +
+            '<h2 style="margin-bottom:0.5rem;">Something went wrong</h2>' +
+            '<p style="color:#64748b;font-size:0.875rem;">' + (e.message || 'Unknown error') + '</p>' +
+            '<button onclick="location.reload()" style="margin-top:1rem;padding:0.5rem 1.5rem;background:#3b82f6;color:white;border:none;border-radius:0.5rem;cursor:pointer;font-weight:600;">Reload</button>' +
+            '</div>';
+        }
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        console.error('Unhandled promise rejection:', e.reason);
+      });
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

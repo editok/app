@@ -1,0 +1,17 @@
+[functions.admin-create-user]
+verify_jwt = true
+
+[functions.send-push-notification]
+verify_jwt = true
+
+[functions.emit-notification]
+verify_jwt = false
+
+[functions.send-status-email]
+verify_jwt = true
+
+[functions.send-broadcast-email]
+verify_jwt = true
+
+[functions.deadline-checker]
+verify_jwt = false
