@@ -41,10 +41,5 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.2"
-  },
-  "allowScripts": {
-    "canvas@3.2.3": true,
-    "esbuild@0.21.5": true,
-    "sharp@0.32.6": true
   }
 }
