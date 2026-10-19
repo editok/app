@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 interface CardProps {
   children: ReactNode;
   className?: string;
+  id?: string;
   padding?: boolean;
   hover?: boolean;
   style?: React.CSSProperties;
@@ -11,9 +12,10 @@ interface CardProps {
   onTouchEnd?: React.TouchEventHandler<HTMLDivElement>;
 }
 
-export function Card({ children, className = '', padding = true, hover = false, style, onTouchStart, onTouchMove, onTouchEnd }: CardProps) {
+export function Card({ children, className = '', id, padding = true, hover = false, style, onTouchStart, onTouchMove, onTouchEnd }: CardProps) {
   return (
     <div
+      id={id}
       className={`bg-white dark:bg-ink-900 rounded-xl shadow-card border border-ink-100/60 dark:border-ink-800 ${padding ? 'p-5 2xl:p-6 3xl:p-7' : ''} ${hover ? 'transition-all duration-300 hover:shadow-float hover:border-primary-200 dark:hover:border-primary-500/30 hover:-translate-y-0.5' : ''} ${className}`}
       style={style}
       onTouchStart={onTouchStart}
